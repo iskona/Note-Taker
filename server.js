@@ -59,11 +59,9 @@ app.post("/api/notes", function (req, res) {
         console.log('Successfully written to db.json file!');
         res.json(newNote);
     })
-
 });
 
 app.delete('/api/notes/:id', (request, response) => {
-
     const noteId = request.params.id;
 
     let newNotes = allNotesArr.filter((note) => note.id != noteId);
